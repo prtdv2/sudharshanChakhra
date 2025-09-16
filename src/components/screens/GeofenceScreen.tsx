@@ -3,6 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MapPin, AlertTriangle, Shield, Navigation } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import Map from '../Map';
 
 interface GeofenceScreenProps {
   onNavigate: (screen: string) => void;
@@ -22,9 +23,12 @@ const GeofenceScreen: React.FC<GeofenceScreenProps> = ({ onNavigate }) => {
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center py-4">
-        <h1 className="text-2xl font-bold text-foreground mb-2">Geofence</h1>
-        <p className="text-muted-foreground">Location-based safety monitoring</p>
+        <h1 className="text-2xl font-bold text-foreground mb-2">Maps</h1>
+        <p className="text-muted-foreground">Live safety monitoring with danger zones</p>
       </div>
+
+      {/* Safety Map */}
+      <Map />
 
       {/* Current Location Status */}
       <Card className="p-6 bg-warning/10 border-warning/20">
