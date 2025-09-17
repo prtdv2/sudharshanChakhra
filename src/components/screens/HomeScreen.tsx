@@ -62,41 +62,41 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       {/* Header */}
-      <div className="text-center py-8">
-        <SafetyLogo size="xl" className="text-emergency mx-auto mb-6" />
-        <h1 className="text-3xl font-bold text-foreground mb-3">Sudarshan Chakra</h1>
-        <p className="text-muted-foreground text-lg">Your safety companion</p>
+      <div className="text-center py-6">
+        <SafetyLogo size="xl" className="text-emergency mx-auto mb-4" />
+        <h1 className="text-2xl font-bold text-foreground mb-2">Sudarshan Chakra</h1>
+        <p className="text-muted-foreground">Your safety companion</p>
       </div>
 
       {/* Live Safety Updates */}
-      <div className="space-y-6">
-        <h2 className="text-xl font-semibold text-foreground">Live Safety Updates</h2>
+      <div className="space-y-4">
+        <h2 className="text-lg font-semibold text-foreground">Live Safety Updates</h2>
         {recentAlerts.map((alert) => (
           <AlertCard key={alert.id} alert={alert} />
         ))}
       </div>
 
       {/* Quick Actions */}
-      <div className="space-y-6">
-        <h2 className="text-xl font-semibold text-foreground">Quick Actions</h2>
-        <div className="grid grid-cols-2 gap-6">
+      <div className="space-y-4">
+        <h2 className="text-lg font-semibold text-foreground">Quick Actions</h2>
+        <div className="grid grid-cols-2 gap-4">
           {quickActions.map((action) => {
             const Icon = action.icon;
             return (
               <Card 
                 key={action.id} 
-                className="p-6 cursor-pointer hover:shadow-elevated transition-all duration-300 hover:scale-105 border-2 border-border hover:border-accent/50"
+                className="p-4 cursor-pointer hover:shadow-elevated transition-shadow"
                 onClick={action.onClick}
               >
-                <div className="flex flex-col items-center text-center space-y-4">
-                  <div className={`w-16 h-16 ${action.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                    <Icon className={`w-8 h-8 ${action.textColor}`} />
+                <div className="flex flex-col items-center text-center space-y-3">
+                  <div className={`w-12 h-12 ${action.color} rounded-full flex items-center justify-center`}>
+                    <Icon className={`w-6 h-6 ${action.textColor}`} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base mb-2">{action.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{action.description}</p>
+                    <h3 className="font-medium text-sm mb-1">{action.title}</h3>
+                    <p className="text-xs text-muted-foreground">{action.description}</p>
                   </div>
                 </div>
               </Card>
@@ -106,12 +106,12 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onNavigate }) => {
       </div>
 
       {/* Status */}
-      <Card className="p-6 bg-safe/10 border-safe/30 shadow-lg">
-        <div className="flex items-center space-x-4">
-          <div className="w-4 h-4 bg-safe rounded-full animate-pulse shadow-sm"></div>
+      <Card className="p-4 bg-safe/10 border-safe/20">
+        <div className="flex items-center space-x-3">
+          <div className="w-3 h-3 bg-safe rounded-full animate-pulse"></div>
           <div>
-            <p className="font-semibold text-safe text-lg">System Status: Active</p>
-            <p className="text-muted-foreground mt-1">All safety features are operational</p>
+            <p className="font-medium text-safe">System Status: Active</p>
+            <p className="text-sm text-muted-foreground">All safety features are operational</p>
           </div>
         </div>
       </Card>
