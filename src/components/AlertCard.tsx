@@ -26,14 +26,14 @@ const AlertCard: React.FC<AlertCardProps> = ({ alert, onAction }) => {
           containerClass: 'border-l-4 border-l-emergency bg-emergency/5',
           iconClass: 'text-emergency',
           titleClass: 'text-emergency',
-          buttonClass: 'bg-emergency text-emergency-foreground hover:bg-emergency/90'
+          buttonClass: 'bg-mustard text-mustard-foreground hover:bg-mustard/90'
         };
       case 'warning':
         return {
           containerClass: 'border-l-4 border-l-warning bg-warning/5',
           iconClass: 'text-warning',
           titleClass: 'text-warning',
-          buttonClass: 'bg-warning text-warning-foreground hover:bg-warning/90'
+          buttonClass: 'bg-mustard text-mustard-foreground hover:bg-mustard/90'
         };
       default:
         return {

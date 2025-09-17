@@ -53,7 +53,8 @@ const GeofenceScreen: React.FC<GeofenceScreenProps> = ({ onNavigate }) => {
 
           <div className="space-y-2">
             <Button 
-              className="w-full bg-warning hover:bg-warning/90 text-warning-foreground"
+              variant="mustard"
+              className="w-full"
               onClick={() => onNavigate('alerts')}
             >
               I understand the risks

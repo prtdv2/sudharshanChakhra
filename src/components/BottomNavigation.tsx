@@ -17,7 +17,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ activeTab, onTabCha
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-border shadow-elevated">
+    <div className="fixed bottom-0 left-0 right-0 bg-black border-t border-border shadow-elevated">
       <div className="flex items-center max-w-lg mx-auto">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id;
@@ -30,7 +30,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ activeTab, onTabCha
                 onClick={() => onTabChange(tab.id)}
                 className="flex-1 flex flex-col items-center py-2 relative"
               >
-                <div className="w-12 h-12 bg-gradient-emergency rounded-full flex items-center justify-center shadow-emergency -mt-6 border-4 border-white">
+                <div className="w-12 h-12 bg-gradient-emergency rounded-full flex items-center justify-center shadow-emergency -mt-6 border-4 border-black">
                   <SafetyLogo size="sm" className="text-white" />
                 </div>
                 <span className="text-xs mt-1 text-emergency font-medium">SOS</span>

@@ -67,6 +67,10 @@ export default {
           DEFAULT: "hsl(var(--danger))",
           foreground: "hsl(var(--danger-foreground))",
         },
+        mustard: {
+          DEFAULT: "hsl(var(--mustard))",
+          foreground: "hsl(var(--mustard-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
