@@ -47,10 +47,10 @@ const SafetyApp: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background dark">
       {/* Main Content */}
-      <div className="max-w-lg mx-auto bg-background min-h-screen pb-20">
-        <div className="p-4">
+      <div className="max-w-lg mx-auto bg-background min-h-screen pb-24">
+        <div className="p-6">
           {renderScreen()}
         </div>
       </div>
